@@ -163,9 +163,9 @@ export function checkGameState(gameId: string): Game | null {
 // Called opportunistically during game creation
 function cleanupOldGames(): void {
   const oneHourAgo = Date.now() - 60 * 60 * 1000;
-  for (const [id, game] of games.entries()) {
+  games.forEach((game, id) => {
     if (game.createdAt < oneHourAgo) {
       games.delete(id);
     }
-  }
+  });
 }
