@@ -1,4 +1,4 @@
-import { Game, Player, GameRound } from '@/types';
+import { Game, Player } from '@/types';
 import { generateGameCode, generatePlayerId, scrambleWord, calculatePoints } from './utils';
 import { getRandomWords } from './words';
 
